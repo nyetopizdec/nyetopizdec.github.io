@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+      <title>Projects.</title>
+      <link rel="stylesheet" href="styleproject.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body>
+      <header>
+            <div>
+                  <a href="index.html"><button class="header__button nav-btn-js" type="button"><div class="arrow-left icon"></div></button></a>
+            </div>
+      </header>
+
+      <div class="text-slider-wrapper">
+            <div class="text-slider">
+                  <div class="text-slide"><h1>A personal <br> assistant.</h1></div>
+                  <div class="text-slide"><h1>skip<br></h1></div>
+                  <div class="text-slide"><h1>skip<br></h1></div>
+                  <div class="text-slide"><h1>не смешно<br></h1></div>
+                  <div class="text-slide"><h1>skip<br></h1></div>
+            </div>
+      </div>
+
+      <div class="slider-control">
+            <div class="prev"><button type="button"><ion-icon name="arrow-back"></ion-icon></button></div>
+            <div class="next"><button type="button"><ion-icon name="arrow-forward"></ion-icon></button></div>
+      </div>
+
+      <div class="blocks">
+            <div class="block-1"></div>
+            <div class="block-2"></div>
+            <div class="block-3"></div>
+      </div>
+
+      <div class="overlay"></div>
+
+      <div class="image-slider">
+            <div class="image-slide" id="one" style="background: url(https://sun9-62.userapi.com/s/v1/ig2/sRUjGRSTWmgCCgH1S8ONvJKcwyRdBsjzYXu0RmEUNL3NMIQsv6gMHjzSbJ4U7-RMYRidd4sKsKv_9a1wq_gfHzM0.jpg?size=671x750&quality=95&type=album) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="two" style="background: url(https://sun9-88.userapi.com/s/v1/if2/ao2-HVhmtXbKCE9s1y0BdGK-im7zbTUhzAM1zL4ZfdAhuPoYki-UcyflUc8Gi4JSjSw4jCrJVTD-tGOaMAlz-vpP.jpg?size=300x250&quality=95&type=album) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="three" style="background: url(https://sun9-36.userapi.com/s/v1/if2/FwrPocDDSeH9uyuJAsaX2svel4sslnsN0k_h2Ya_a575_alrsjH3LomIyM1Qdz2PhJQisnjZWL6eyyXZSOdrpyt2.jpg?size=735x955&quality=96&type=album) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="four" style="background: url(https://dota2.ru/img/heroes/anti_mage/portrait.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="five" style="background: url(https://sun9-68.userapi.com/s/v1/ig2/mBKmVhMZvi4m3e4MVi0K720YzxX5gh8vFNYUqLXTA0f4cUE_r2aCATVFCkpk-LTnrNMsGCeHCrFUJSWAoEFBCvpE.jpg?size=336x354&quality=95&type=album) no-repeat 50% 50%; background-size: cover;"></div>
+      </div>
+      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+<script src="slick.js"></script>
+<script>
+
+var sickPrimary = {
+      autoplay: true,
+      autoplaySpeed: 2400,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      speed: 1800,
+      cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+      asNavFor: '.text-slider',
+      centerMode: true,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next')
+}
+
+var sickSecondary = {
+      autoplay: true,
+      autoplaySpeed: 2400,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 1800,
+      cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+      asNavFor: '.image-slider',
+      prevArrow: $('.prev'),
+      nextArrow: $('.next')
+}
+
+$('.image-slider').slick(sickPrimary);
+$('.text-slider').slick(sickSecondary);
+
+</script>
+</body>
+</html>

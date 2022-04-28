@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;800&display=swap');
+
+@font-face {
+  font-family: 'Rugen';
+  src: local('Rugen Expanded'), local('Rugen-Expanded'),
+      url('Rugen-Expanded.woff2') format('woff2'),
+      url('Rugen-Expanded.woff') format('woff'),
+      url('Rugen-Expanded.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(54, 54, 54, 0.85), rgba(54, 54, 54, 0.85)), url(bg1.webm);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+}
+
+.pace {
+  pointer-events: none;
+  user-select: none;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  border: 0px;
+  height: 1px;
+  overflow: hidden;
+  background:#1b1b1b;
+}
+
+.pace .pace-progress {
+  box-sizing: border-box;
+  transform: translate3d(0, 0, 0);
+  max-width: 400px;
+  position: fixed;
+  z-index: 2000;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  background: grey;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+
+#preloader{
+  width:100%;
+  height:100vh;
+  background-image: linear-gradient(rgba(54, 54, 54, 0.85), rgba(54, 54, 54, 0.85)), url(preload.webp);
+  background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  overflow:hidden;
+  position:fixed;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 100;
+}
+
+.p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'Rugen';
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ 
+body, h1,h2,h3, p{
+	margin:0;
+	padding:0;
+  overflow: hidden;
+}
+ 
+.mainCont{
+	width:1000px;
+	margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.5px;
+}
+ 
+.mainCont h2{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-weight: 300;
+	font-size: 48px;
+	margin: 60px 0 0 0;
+	color: white;
+  opacity: 0;
+ 
+  animation: fadeInAnimation 7s ease-in-out 0.2s forwards;
+}
+ 
+.mainCont h3{
+	text-align: center;
+	font-weight: 400;
+	font-size: 18px;
+	color: rgba(255,255,255,0.75);
+  margin: 0 0 60px 0;
+  opacity: 0;
+ 
+  animation: fadeInAnimation 7.5s ease-in-out 0.5s forwards;
+}
+ 
+.terminalCont{
+	background:rgba(0, 0, 0, 0.150);
+	width: 100%;
+	border-radius: 4px;
+  padding:12px 0 0 0;
+  margin-top: -20px;
+  font-family: 'Roboto Mono', monospace;
+  opacity: 0;
+ 
+  animation:
+    slideDownAnimation 1s ease-in-out 1s forwards,
+    fadeInAnimation 0.8s ease-in-out 1s forwards;
+}
+ 
+.userEnteredText{
+  color: rgba(86, 224, 93, 0.75);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+ 
+#terminalReslutsCont{
+	width:100%;
+	height: 400px;
+	padding: 12px;
+	overflow-y: auto;
+	resize: none;
+	border: none;
+	font-size: 14px;
+  line-height: 28px;
+	display: block;
+	color: rgba(255,255,255,0.9);
+  overflow: hidden;
+}
+
+#terminalReslutsCont a{
+  color: rgba(86, 224, 93, 0.75);
+  text-decoration: none;
+}
+ 
+#terminalReslutsCont a:hover{
+  text-decoration: underline;
+}
+ 
+#terminalTextInput{
+	background: rgba(0, 0, 0, 0.150);
+	display: block;
+	border: none;
+	border-top: 1px solid rgba(255,255,255,0.2);
+	border-radius: 0 0 4px 4px;
+	width: 100%;
+	color: rgba(86, 224, 93, 0.75);
+	padding: 18px;
+	font-size: 14px;
+  outline: none;
+  font-family: 'Roboto Mono', monospace;
+}
+ 
+@-webkit-keyframes fadeInAnimation {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeInAnimation {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeInAnimation {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInAnimation {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+ 
+@-webkit-keyframes slideDownAnimation {
+  0%   { margin-top: -20px;}
+  100% { margin-top: 0;}
+}
+@-moz-keyframes slideDownAnimation {
+  0%   { margin-top: -20px;}
+  100% { margin-top: 0;}
+}
+@-o-keyframes slideDownAnimation {
+  0%   { margin-top: -20px;}
+  100% { margin-top: 0;}
+}
+@keyframes slideDownAnimation {
+  0%   { margin-top: -20px;}
+  100% { margin-top: 0;}
+}
+ 
+@media screen and (max-width: 900px){
+  .html,body{
+    background-image: linear-gradient(rgba(54, 54, 54, 0.85), rgba(54, 54, 54, 0.85)), url(bgmobile.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .p{
+    font-family: 'Montserrat', sans-serif;
+  }
+  #preloader{
+    background-image: linear-gradient(rgba(54, 54, 54, 0.85), rgba(54, 54, 54, 0.85)), url(bgpreload.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .gradientCont{
+    height: 220px;
+  }
+  .mainCont{
+    width: 100%;
+    padding: 0 12px;
+  }
+  .mainCont h2{
+    font-size: 32px;
+    margin: 40px 0 0 0;
+  }
+  .mainCont h3{
+    font-size: 16px;
+    margin: 0 0 40px 0;
+  }
+  #terminalReslutsCont{
+    overflow:scroll;
+  }
+ 
+}
