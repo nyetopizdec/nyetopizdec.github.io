@@ -40,13 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var helpKeyWords = [
       "- 'About me' will display the a little information about the developer.",
-      "- 'Contact' will display the a the main ways of communication with the creator.", // не сделано
-      "- 'Projects' will display the a several projects.", // не сделано
-      "- Google + keyword to search directly in Google (ex. HTML - what it is?)",
-      "- YouTube + keyword to search directly in YouTube (ex. lofi hip hop)",
-      "- 'Time' will display the current time.",
-      "- 'Date' will display the current date.",
-      "- 'clear' сlears the terminal",
+      "- 'Contact' will display the a the main ways of communication with the creator.", 
+      "- 'Projects' will display the a several projects.", 
+      "- 'Clear' сlears the terminal",
+      "-  Google + keyword to search directly in Google (ex. HTML - what it is?).",
+      "-  YouTube + keyword to search directly in YouTube (ex. lofi hip hop).",
       "* There are more keywords that you have to discover by yourself."
     ].join('<br>');
     addTextToResults(helpKeyWords);
@@ -169,8 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
         addTextToResults("<br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
         break;
 
-      case "как жить":
-      case "как жить?":
       case "смысл жизни":
         clearInput();
         addTextToResults("Единого смысла жизни - нет.Каждый человек - индивидуальная личность. У каждого своя любимая еда, музыка. <br>Смысл жизни тоже.");
